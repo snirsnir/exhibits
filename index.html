@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כדור הארץ: מסע אל הכוכב הכחול - מוזיאון הטכנודע</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --primary-color: #1abc9c;
+    --primary-dark: #16a085;
+    --secondary-color: #3498db;
+    --secondary-dark: #2980b9;
+    --accent-color: #e74c3c;
+    --light-bg: #ecf0f1;
+    --dark-bg: #2c3e50;
+    --text-color: #2d3436;
+    --light-text: #fff;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Heebo', 'Rubik', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%232980b9' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--light-text);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='50' cy='50' r='12'/%3E%3Ccircle cx='20' cy='20' r='8'/%3E%3Ccircle cx='80' cy='20' r='8'/%3E%3Ccircle cx='20' cy='80' r='8'/%3E%3Ccircle cx='80' cy='80' r='8'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .logo-container {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            max-width: 180px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            display: inline-block;
+        }
+
+        header h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        header h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-section {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .intro-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%232980b9' fill-opacity='0.03'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' /%3E%3C/g%3E%3C/svg%3E");
+            z-index: -1;
+        }
+
+        .exhibition-title {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 900;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .exhibition-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .exhibition-description {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .exhibition-description p {
+            margin-bottom: 1rem;
+        }
+
+        .exhibition-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            border-radius: 2px;
+        }
+
+        .exhibits-section {
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .exhibits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .exhibit-card {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+            opacity: 1;
+            position: relative;
+            border-top: 5px solid transparent;
+        }
+
+        .exhibit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--hover-shadow);
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .exhibit-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .exhibit-content {
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .exhibit-number {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            position: absolute;
+            top: -27px;
+            right: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .exhibit-name {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.8rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .exhibit-name::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            border-radius: 1.5px;
+        }
+
+        .exhibit-principle {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            background-color: rgba(41, 128, 185, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .exhibit-activity {
+            color: #555;
+            line-height: 1.7;
+            font-size: 1.1rem;
+            background-color: rgba(39, 174, 96, 0.05);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary-color);
+            text-align: justify;
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            z-index: 2;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .earth-badge {
+            background-color: rgba(41, 128, 185, 0.9);
+        }
+
+        .space-badge {
+            background-color: rgba(39, 174, 96, 0.9);
+        }
+
+        .environment-badge {
+            background-color: rgba(243, 156, 18, 0.9);
+        }
+
+        .category-icon {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 1.2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-family: 'Heebo', 'Rubik', Arial, sans-serif;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input::placeholder {
+            color: #aaa;
+        }
+
+        .print-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 3rem auto;
+            display: block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .print-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .print-btn:hover::before {
+            left: 100%;
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .fadeInUp {
+            animation-name: fadeInUp;
+        }
+
+        .back-header {
+            background-color: white;
+            padding: 2px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 100;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .back-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-arrow {
+            margin-left: 8px;
+            font-size: 1.2em;
+        }
+
+        .back-header .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* עיצוב גלריית התמונות */
+        .gallery-section {
+            margin-top: 4rem;
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .gallery-container {
+            position: relative;
+            max-width: 900px;
+            margin: 2rem auto;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .gallery-slider {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .gallery-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .gallery-slide.active {
+            opacity: 1;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-slide:hover .slide-caption {
+            transform: translateY(0);
+        }
+
+        .gallery-prev, .gallery-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .gallery-prev:hover, .gallery-next:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-prev {
+            left: 20px;
+        }
+
+        .gallery-next {
+            right: 20px;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            background-color: white;
+            border-radius: 0 0 16px 16px;
+        }
+
+        .gallery-dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        .gallery-dot:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-slider {
+                height: 300px;
+            }
+            
+            .gallery-prev, .gallery-next {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                line-height: 40px;
+            }
+        }
+
+        @media print {
+            header, footer, .search-input, .print-btn, .gallery-section, .back-header {
+                display: none !important;
+            }
+            
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .exhibits-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .exhibit-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 1rem;
+                box-shadow: none;
+                border: 1px solid #ddd;
+                transform: none !important;
+            }
+            
+            .intro-section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+
+            .section-title::after,
+            .exhibition-title::after,
+            .exhibit-name::after {
+                display: none;
+            }
+            
+            .category-badge {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="back-header">
+    <div class="container">
+        <a href="https://technoda.org.il" class="back-button">
+            <span class="back-arrow">&#x2192;</span> חזרה לאתר הטכנודע
+        </a>
+    </div>
+</header>
+
+    <div class="container">
+        <section class="intro-section animated fadeInUp">
+            <h1 class="exhibition-title">כדור הארץ: מסע אל הכוכב הכחול</h1>
+            
+        <div class="exhibition-description">
+            <p>התערוכה "כדור הארץ": מסע אל הכוכב הכחול מזמינה את המבקרים למפגש בלתי אמצעי עם ייחודיותו של כוכב הלכת שלנו ועם המאפיינים הגיאופיזיים המבדילים אותו מיתר גופי השמיים במערכת השמש. באמצעות גישה תצוגתית חדשנית, נחשף הקהל לתיעוד ויזואלי-חווייתי של המרכיבים המרכזיים העושים את כדור הארץ לכוכב לכת מיוחד בעל יכולת לקיים חיים.</p>
+            <p>התפיסה החינוכית המנחה את המוזיאון ממקמת את הילד כחוקר פעיל במרחב הגילוי. המערך הפדגוגי מעניק למבקרים הצעירים הזדמנות להתנסות בתהליך היצירתי של חקר כדור הארץ באמצעות פעילות מעשית של ניסוי ותצפית. השיח המוביל של התערוכה בוחן את הקשרים הגלומים בין הדינמיקה הפלנטרית לבין התנאים המאפשרים קיום חיים, ומספק כלי ניתוח להבנת המורכבות הגלומה בתהליכי האבולוציה הגיאולוגית והביולוגית. השאיפה המרכזית היא לטפח חשיבה מדעית וסביבתית המאפשרת הבנה עמוקה יותר של המערכות האקולוגיות והקלימטיות.</p>
+        </div>
+        </section>
+
+<section class="exhibits-section">
+    <h2 class="section-title animated fadeInUp">אוסף המוצגים המוזיאליים</h2>
+
+    <div class="exhibits-container">
+<!-- מוצג 1 -->
+        <div class="exhibit-card animated fadeInUp" data-category="earth">
+            <div class="category-badge earth-badge">
+                <span class="category-icon">🌍</span>כדור הארץ
+            </div>
+            <img src="1.jpg" alt="הגלובוס המונומנטלי" class="exhibit-image">
+            <div class="exhibit-content">
+                <div class="exhibit-number">1</div>
+                <h3 class="exhibit-name">הגלובוס המונומנטלי</h3>
+                <p class="exhibit-activity">המיצב המרכזי מציג גלובוס ארצי אינטראקטיבי ענק המאפשר למבקרים להתבונן במבנה הגיאוגרפי של כדור הארץ. המערכת הדיגיטלית מדגימה את חלוקת היבשות והאוקיינוסים, תוך הדגשת הייחודיות של כוכב הלכת שלנו כמקום היחיד הידוע בו קיימים חיים. המבקרים יכולים לחקור את המרחקים בין יבשות, להבין את התפלגות המים על פני כדור הארץ ולגלות עובדות מרתקות על הגיאוגרפיה הפלנטרית.</p>
+            </div>
+        </div>
+
+        <!-- מוצג 2 -->
+        <div class="exhibit-card animated fadeInUp" data-category="space">
+            <div class="category-badge space-badge">
+                <span class="category-icon">🚀</span>חלל
+            </div>
+            <img src="2.jpg" alt="מיקום דמויות על הגלובוס" class="exhibit-image">
+            <div class="exhibit-content">
+                <div class="exhibit-number">2</div>
+                <h3 class="exhibit-name">מיקום דמויות על הגלובוס</h3>
+                <p class="exhibit-activity">פעילות אינטראקטיבית בה המבקרים מקבלים דמויות מגנטיות המייצגות בעלי חיים, צמחים ותופעות טבע שונות, ומוזמנים למקם אותן על גבי גלובוסים גדולים במקומות המתאימים - ימים או יבשות. הפעילות מפתחת הבנה גיאוגרפית של התפלגות החיים על פני כדור הארץ, תוך למידה על בתי גידול שונים ועל הקשר בין מיקום גיאוגרפי לסוגי החיים השונים השוכנים בו.</p>
+            </div>
+        </div>
+
+        <!-- מוצג 3 -->
+        <div class="exhibit-card animated fadeInUp" data-category="environment">
+            <div class="category-badge environment-badge">
+                <span class="category-icon">🇮🇱</span>ישראל
+            </div>
+            <img src="3.jpg" alt="העתקת צורת ישראל" class="exhibit-image">
+            <div class="exhibit-content">
+                <div class="exhibit-number">3</div>
+                <h3 class="exhibit-name">מפת ישראל האינטראקטיבית - העתקה בעזרת האצבע</h3>
+                <p class="exhibit-activity">מיצב דיגיטלי חדשני המזמין את המבקרים להעתיק בעזרת האצבע את צורתה הייחודית של מדינת ישראל על מסך מגע רגיש. הפעילות מפתחת מיומנות מוטורית עדינה תוך למידה על הגיאוגרפיה הישראלית. המערכת מזהה את דיוק ההעתקה ומספקת משוב חיובי, תוך הצגת עובדות מעניינות על האזורים הגיאוגרפיים השונים במדינה - מהכנרת בצפון ועד לאילת בדרום.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        
+        <!-- כפתור להדפסת הקטלוג -->
+        <button class="print-btn" onclick="window.print()">
+            <span class="category-icon">🖨️</span>הדפסת קטלוג התערוכה
+        </button>
+        
+<section class="gallery-section animated fadeInUp">
+    <h2 class="section-title animated fadeInUp">גלריית תמונות מאולמי התערוכה</h2>
+    
+    <div class="gallery-container">
+        <div class="gallery-slider">
+            <div class="gallery-track" id="galleryTrack">
+                <div class="gallery-slide active">
+                    <img src="a.jpg" alt="אולם הכניסה לתערוכה" class="gallery-image">
+                    <div class="slide-caption">אולם הכניסה לתערוכה עם הגלובוס המונומנטלי</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="b.jpg" alt="סימולטור תלת-ממדי" class="gallery-image">
+                    <div class="slide-caption">ילדים חווים את הסימולטור התלת-ממדי של סיבוב כדור הארץ</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="c.jpg" alt="מעבדת האור האולטרה-סגול" class="gallery-image">
+                    <div class="slide-caption">חקר עולם הלילה במעבדת האור האולטרה-סגול</div>
+                </div>
+                <div class="gallery-slide">
+                    <img src="d.jpg" alt="מעבדת הסימולציה הפלנטרית" class="gallery-image">
+                    <div class="slide-caption">מעבדת הסימולציה הפלנטרית האינטראקטיבית</div>
+                </div>
+            </div>
+        </div>
+        <button class="gallery-prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="gallery-next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="gallery-dots" id="galleryDots"></div>
+    </div>
+</section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 מוזיאון הטכנודע - כל הזכויות שמורות</p>
+        <p>תערוכת "כדור הארץ: מסע אל הכוכב הכחול"</p>
+    </footer>
+
+    <script>
+// JavaScript מלא לגלריה
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.gallery-slide');
+    const totalSlides = slides.length;
+    let slideInterval;
+
+    // בדיקה שיש תמונות
+    if (slides.length === 0) return;
+
+    // יצירת נקודות ניווט
+    function createDots() {
+        const dotsContainer = document.querySelector('.gallery-dots');
+        if (!dotsContainer) return;
+        
+        // ניקוי נקודות קיימות
+        dotsContainer.innerHTML = '';
+        
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('gallery-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    // מעבר לשקופית ספציפית
+    function goToSlide(index) {
+        // הסרת active מכל השקופיות והנקודות
+        slides.forEach(slide => slide.classList.remove('active'));
+        document.querySelectorAll('.gallery-dot').forEach(dot => dot.classList.remove('active'));
+        
+        // הוספת active לשקופית הנוכחית
+        if (slides[index]) {
+            slides[index].classList.add('active');
+            currentSlideIndex = index;
+        }
+        
+        // הוספת active לנקודה הנוכחית
+        const dots = document.querySelectorAll('.gallery-dot');
+        if (dots[index]) {
+            dots[index].classList.add('active');
+        }
+    }
+
+    // שינוי שקופית (קדימה או אחורה)
+    function changeSlide(direction) {
+        currentSlideIndex += direction;
+        
+        if (currentSlideIndex >= totalSlides) {
+            currentSlideIndex = 0;
+        } else if (currentSlideIndex < 0) {
+            currentSlideIndex = totalSlides - 1;
+        }
+        
+        goToSlide(currentSlideIndex);
+    }
+
+    // הפעלת אוטומציה
+    function startAutoSlide() {
+        slideInterval = setInterval(() => {
+            changeSlide(1);
+        }, 5000); // החלפה כל 5 שניות
+    }
+
+    // עצירת אוטומציה
+    function stopAutoSlide() {
+        if (slideInterval) {
+            clearInterval(slideInterval);
+        }
+    }
+
+    // אירועי כפתורים
+    const nextButton = document.querySelector('.gallery-next');
+    const prevButton = document.querySelector('.gallery-prev');
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            changeSlide(1);
+        });
+    }
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            changeSlide(-1);
+        });
+    }
+
+    // עצירת אוטומציה במעבר עכבר
+    const galleryContainer = document.querySelector('.gallery-container');
+    if (galleryContainer) {
+        galleryContainer.addEventListener('mouseenter', stopAutoSlide);
+        galleryContainer.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    // הפעלת הגלריה
+    createDots();
+    goToSlide(0); // התחלה עם התמונה הראשונה
+    startAutoSlide(); // הפעלת אוטומציה
+
+    // חשיפת פונקציות לשימוש גלובלי (אם נדרש)
+    window.changeSlide = changeSlide;
+    window.goToSlide = goToSlide;
+});
+
+// הוספת פונקציונליות כפתור הדפסה
+document.addEventListener('DOMContentLoaded', function() {
+    const printBtn = document.querySelector('.print-btn');
+    if (printBtn) {
+        printBtn.addEventListener('click', function() {
+            window.print();
+        });
+    }
+});
+    </script>
+</body>
+</html>
